@@ -1,0 +1,234 @@
+/*###########################################################################################
+#                                                                                           #
+#                   8b,dPPYba,   ,adPPYba,  ,adPPYb,d8 ,adPPYYba, ,adPPYba,                 #
+#                   88P'    "8a a8P_____88 a8"    `Y88 ""     `Y8 I8[    ""                 #
+#                   88       d8 8PP""""""" 8b       88 ,adPPPPP88  `"Y8ba,                  #
+#                   88b,   ,a8" "8b,   ,aa "8a,   ,d88 88,    ,88 aa    ]8I                 #
+#                   88`YbbdP"'   `"Ybbd8"'  `"YbbdP"Y8 `"8bbdP"Y8 `"YbbdP"'                 #
+#                   88                      aa,    ,88                                      # 
+#                   88                       "Y8bbdP"                                       #
+#                                                                                           #
+#                                                                                           #
+#                           © 2019 - pegascss by Studio Pegas                               #
+#                                last update : 19-11-08                                     #
+#                                    version : 0.0.1                                        #
+#                                                                                           #
+############################################################################################*/                                                                                                                                                                         
+
+/*
+*   SUMMARY
+*
+*
+* | BORDER
+* |-- Radius
+* |-- Border style
+*
+*
+* | BUTTON
+* |-- Button style
+*
+*
+* | COLOR
+* |-- Background
+* |-- Text
+*
+*
+* | FONTS
+* |-- Gotham
+*
+*
+* | INPUT
+* |-- text
+* |-- password
+* |-- email
+* |-- date
+*
+*
+* | TEXT
+* |-- Bold
+* |-- Italic
+* |-- Underline
+* |-- Headlines
+* |-- Text Align
+*
+*
+* | WRAPPER
+* |-- Site
+* |-- Content
+*/
+
+@import "normalize";
+
+/*############################################################################################
+#                                                                                            #
+#                                           COLOR                                            #
+#                                                                                            #
+############################################################################################*/
+
+// init rgb colors
+$primary: #5ea4e6;
+$secondary: rgb(185, 185, 185);
+$success: #66c75a;
+$warning: #eab543;
+$danger:#df5050;
+$info:#4193d7;
+$dark:#232323;
+$light: #f7f7f7;
+$borderColor: #2f8fa7;
+
+// array colors
+$colors: (
+    'primary': $primary, 
+    'secondary': $secondary,
+    'success': $success, 
+    'warning': $warning, 
+    'danger': $danger, 
+    'info': $info, 
+    'dark': $dark, 
+    'light': $light); 
+
+// loop background colors
+@each $color, $i in $colors {
+    #{".bg-" + $color} {
+      background-color: $i;
+    }
+}    
+
+// loop text colors
+@each $color, $i in $colors {
+    #{".txt-" + $color} {
+      color: $i;
+    }
+}
+
+/*############################################################################################
+#                                                                                            #
+#                                           BORDER                                           #
+#                                                                                            #
+############################################################################################*/
+
+// border radius
+@for $i from 1 through 30 {
+  .br-#{$i} {
+      border-radius: $i+px;
+  }
+}
+
+// border styles
+@each $border, $c in $colors {
+  @for $i from 1 through 30 {
+    .bs-#{$border+"_"+$i} {
+      border: $i+px solid $c;
+    }
+  }
+}
+
+
+
+/*############################################################################################
+#                                                                                            #
+#                                           BUTTON                                           #
+#                                                                                            #
+############################################################################################*/
+
+
+button {
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+
+button.disabled {
+  filter: brightness(70%);
+  cursor: not-allowed;
+}
+
+
+
+/*############################################################################################
+#                                                                                            #
+#                                           FONTS                                            #                                                                                           
+#                                                                                            #
+############################################################################################*/
+
+
+
+
+
+
+/*############################################################################################
+#                                                                                            #
+#                                           TEXT                                             #                                                                                           
+#                                                                                            #
+############################################################################################*/
+
+// bold
+.b {
+	font-weight: bold;
+}
+
+// italic
+.i {
+    font-style: italic;
+}
+
+// underline
+.u {
+    text-decoration: underline;
+}
+
+// headings
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom:.5rem;
+    font-weight:500;
+    line-height:1.2
+}
+
+.h1, h1{font-size:2.5rem}
+
+
+$headings : h2 h3 h4 h5 h6;
+$font-size-base : 2rem;
+$font-size-down : 0.25rem;
+
+@each $heading in $headings {
+  .#{$heading','} #{$heading}  {
+    font-size : $font-size-base;
+  }
+  $font-size-base : $font-size-base - $font-size-down;
+}
+
+// text align
+$aligns: ('tal': left, 'tac': center ,'tar': right, );
+
+@each $align, $i in $aligns {
+  #{"." + $align} {
+    text-align: $i;
+  }
+}
+
+
+
+/*############################################################################################
+#                                                                                            #
+#                                           WRAPPER                                          #                                                                                           
+#                                                                                            #
+############################################################################################*/
+
+#wrappersite {
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	display: grid;
+	grid-row-gap: 0px;
+	grid-column-gap: 0px;
+	transition: 0.6s;
+	position: relative;
+}
+
+.wrappercontent {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}

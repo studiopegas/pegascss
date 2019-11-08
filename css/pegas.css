@@ -1,0 +1,1653 @@
+@charset "UTF-8";
+/*###########################################################################################
+#                                                                                           #
+#                   8b,dPPYba,   ,adPPYba,  ,adPPYb,d8 ,adPPYYba, ,adPPYba,                 #
+#                   88P'    "8a a8P_____88 a8"    `Y88 ""     `Y8 I8[    ""                 #
+#                   88       d8 8PP""""""" 8b       88 ,adPPPPP88  `"Y8ba,                  #
+#                   88b,   ,a8" "8b,   ,aa "8a,   ,d88 88,    ,88 aa    ]8I                 #
+#                   88`YbbdP"'   `"Ybbd8"'  `"YbbdP"Y8 `"8bbdP"Y8 `"YbbdP"'                 #
+#                   88                      aa,    ,88                                      # 
+#                   88                       "Y8bbdP"                                       #
+#                                                                                           #
+#                                                                                           #
+#                           © 2019 - pegascss by Studio Pegas                               #
+#                                last update : 19-11-08                                     #
+#                                    version : 0.0.1                                        #
+#                                                                                           #
+############################################################################################*/
+/*
+*   SUMMARY
+*
+*
+* | BORDER
+* |-- Radius
+* |-- Border style
+*
+*
+* | BUTTON
+* |-- Button style
+*
+*
+* | COLOR
+* |-- Background
+* |-- Text
+*
+*
+* | FONTS
+* |-- Gotham
+*
+*
+* | INPUT
+* |-- text
+* |-- password
+* |-- email
+* |-- date
+*
+*
+* | TEXT
+* |-- Bold
+* |-- Italic
+* |-- Underline
+* |-- Headlines
+* |-- Text Align
+*
+*
+* | WRAPPER
+* |-- Site
+* |-- Content
+*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*############################################################################################
+#                                                                                            #
+#                                           COLOR                                            #
+#                                                                                            #
+############################################################################################*/
+.bg-primary {
+  background-color: #5ea4e6;
+}
+
+.bg-secondary {
+  background-color: #b9b9b9;
+}
+
+.bg-success {
+  background-color: #66c75a;
+}
+
+.bg-warning {
+  background-color: #eab543;
+}
+
+.bg-danger {
+  background-color: #df5050;
+}
+
+.bg-info {
+  background-color: #4193d7;
+}
+
+.bg-dark {
+  background-color: #232323;
+}
+
+.bg-light {
+  background-color: #f7f7f7;
+}
+
+.txt-primary {
+  color: #5ea4e6;
+}
+
+.txt-secondary {
+  color: #b9b9b9;
+}
+
+.txt-success {
+  color: #66c75a;
+}
+
+.txt-warning {
+  color: #eab543;
+}
+
+.txt-danger {
+  color: #df5050;
+}
+
+.txt-info {
+  color: #4193d7;
+}
+
+.txt-dark {
+  color: #232323;
+}
+
+.txt-light {
+  color: #f7f7f7;
+}
+
+/*############################################################################################
+#                                                                                            #
+#                                           BORDER                                           #
+#                                                                                            #
+############################################################################################*/
+.br-1 {
+  border-radius: 1px;
+}
+
+.br-2 {
+  border-radius: 2px;
+}
+
+.br-3 {
+  border-radius: 3px;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+.br-5 {
+  border-radius: 5px;
+}
+
+.br-6 {
+  border-radius: 6px;
+}
+
+.br-7 {
+  border-radius: 7px;
+}
+
+.br-8 {
+  border-radius: 8px;
+}
+
+.br-9 {
+  border-radius: 9px;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-11 {
+  border-radius: 11px;
+}
+
+.br-12 {
+  border-radius: 12px;
+}
+
+.br-13 {
+  border-radius: 13px;
+}
+
+.br-14 {
+  border-radius: 14px;
+}
+
+.br-15 {
+  border-radius: 15px;
+}
+
+.br-16 {
+  border-radius: 16px;
+}
+
+.br-17 {
+  border-radius: 17px;
+}
+
+.br-18 {
+  border-radius: 18px;
+}
+
+.br-19 {
+  border-radius: 19px;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+.br-21 {
+  border-radius: 21px;
+}
+
+.br-22 {
+  border-radius: 22px;
+}
+
+.br-23 {
+  border-radius: 23px;
+}
+
+.br-24 {
+  border-radius: 24px;
+}
+
+.br-25 {
+  border-radius: 25px;
+}
+
+.br-26 {
+  border-radius: 26px;
+}
+
+.br-27 {
+  border-radius: 27px;
+}
+
+.br-28 {
+  border-radius: 28px;
+}
+
+.br-29 {
+  border-radius: 29px;
+}
+
+.br-30 {
+  border-radius: 30px;
+}
+
+.bs-primary_1 {
+  border: 1px solid #5ea4e6;
+}
+
+.bs-primary_2 {
+  border: 2px solid #5ea4e6;
+}
+
+.bs-primary_3 {
+  border: 3px solid #5ea4e6;
+}
+
+.bs-primary_4 {
+  border: 4px solid #5ea4e6;
+}
+
+.bs-primary_5 {
+  border: 5px solid #5ea4e6;
+}
+
+.bs-primary_6 {
+  border: 6px solid #5ea4e6;
+}
+
+.bs-primary_7 {
+  border: 7px solid #5ea4e6;
+}
+
+.bs-primary_8 {
+  border: 8px solid #5ea4e6;
+}
+
+.bs-primary_9 {
+  border: 9px solid #5ea4e6;
+}
+
+.bs-primary_10 {
+  border: 10px solid #5ea4e6;
+}
+
+.bs-primary_11 {
+  border: 11px solid #5ea4e6;
+}
+
+.bs-primary_12 {
+  border: 12px solid #5ea4e6;
+}
+
+.bs-primary_13 {
+  border: 13px solid #5ea4e6;
+}
+
+.bs-primary_14 {
+  border: 14px solid #5ea4e6;
+}
+
+.bs-primary_15 {
+  border: 15px solid #5ea4e6;
+}
+
+.bs-primary_16 {
+  border: 16px solid #5ea4e6;
+}
+
+.bs-primary_17 {
+  border: 17px solid #5ea4e6;
+}
+
+.bs-primary_18 {
+  border: 18px solid #5ea4e6;
+}
+
+.bs-primary_19 {
+  border: 19px solid #5ea4e6;
+}
+
+.bs-primary_20 {
+  border: 20px solid #5ea4e6;
+}
+
+.bs-primary_21 {
+  border: 21px solid #5ea4e6;
+}
+
+.bs-primary_22 {
+  border: 22px solid #5ea4e6;
+}
+
+.bs-primary_23 {
+  border: 23px solid #5ea4e6;
+}
+
+.bs-primary_24 {
+  border: 24px solid #5ea4e6;
+}
+
+.bs-primary_25 {
+  border: 25px solid #5ea4e6;
+}
+
+.bs-primary_26 {
+  border: 26px solid #5ea4e6;
+}
+
+.bs-primary_27 {
+  border: 27px solid #5ea4e6;
+}
+
+.bs-primary_28 {
+  border: 28px solid #5ea4e6;
+}
+
+.bs-primary_29 {
+  border: 29px solid #5ea4e6;
+}
+
+.bs-primary_30 {
+  border: 30px solid #5ea4e6;
+}
+
+.bs-secondary_1 {
+  border: 1px solid #b9b9b9;
+}
+
+.bs-secondary_2 {
+  border: 2px solid #b9b9b9;
+}
+
+.bs-secondary_3 {
+  border: 3px solid #b9b9b9;
+}
+
+.bs-secondary_4 {
+  border: 4px solid #b9b9b9;
+}
+
+.bs-secondary_5 {
+  border: 5px solid #b9b9b9;
+}
+
+.bs-secondary_6 {
+  border: 6px solid #b9b9b9;
+}
+
+.bs-secondary_7 {
+  border: 7px solid #b9b9b9;
+}
+
+.bs-secondary_8 {
+  border: 8px solid #b9b9b9;
+}
+
+.bs-secondary_9 {
+  border: 9px solid #b9b9b9;
+}
+
+.bs-secondary_10 {
+  border: 10px solid #b9b9b9;
+}
+
+.bs-secondary_11 {
+  border: 11px solid #b9b9b9;
+}
+
+.bs-secondary_12 {
+  border: 12px solid #b9b9b9;
+}
+
+.bs-secondary_13 {
+  border: 13px solid #b9b9b9;
+}
+
+.bs-secondary_14 {
+  border: 14px solid #b9b9b9;
+}
+
+.bs-secondary_15 {
+  border: 15px solid #b9b9b9;
+}
+
+.bs-secondary_16 {
+  border: 16px solid #b9b9b9;
+}
+
+.bs-secondary_17 {
+  border: 17px solid #b9b9b9;
+}
+
+.bs-secondary_18 {
+  border: 18px solid #b9b9b9;
+}
+
+.bs-secondary_19 {
+  border: 19px solid #b9b9b9;
+}
+
+.bs-secondary_20 {
+  border: 20px solid #b9b9b9;
+}
+
+.bs-secondary_21 {
+  border: 21px solid #b9b9b9;
+}
+
+.bs-secondary_22 {
+  border: 22px solid #b9b9b9;
+}
+
+.bs-secondary_23 {
+  border: 23px solid #b9b9b9;
+}
+
+.bs-secondary_24 {
+  border: 24px solid #b9b9b9;
+}
+
+.bs-secondary_25 {
+  border: 25px solid #b9b9b9;
+}
+
+.bs-secondary_26 {
+  border: 26px solid #b9b9b9;
+}
+
+.bs-secondary_27 {
+  border: 27px solid #b9b9b9;
+}
+
+.bs-secondary_28 {
+  border: 28px solid #b9b9b9;
+}
+
+.bs-secondary_29 {
+  border: 29px solid #b9b9b9;
+}
+
+.bs-secondary_30 {
+  border: 30px solid #b9b9b9;
+}
+
+.bs-success_1 {
+  border: 1px solid #66c75a;
+}
+
+.bs-success_2 {
+  border: 2px solid #66c75a;
+}
+
+.bs-success_3 {
+  border: 3px solid #66c75a;
+}
+
+.bs-success_4 {
+  border: 4px solid #66c75a;
+}
+
+.bs-success_5 {
+  border: 5px solid #66c75a;
+}
+
+.bs-success_6 {
+  border: 6px solid #66c75a;
+}
+
+.bs-success_7 {
+  border: 7px solid #66c75a;
+}
+
+.bs-success_8 {
+  border: 8px solid #66c75a;
+}
+
+.bs-success_9 {
+  border: 9px solid #66c75a;
+}
+
+.bs-success_10 {
+  border: 10px solid #66c75a;
+}
+
+.bs-success_11 {
+  border: 11px solid #66c75a;
+}
+
+.bs-success_12 {
+  border: 12px solid #66c75a;
+}
+
+.bs-success_13 {
+  border: 13px solid #66c75a;
+}
+
+.bs-success_14 {
+  border: 14px solid #66c75a;
+}
+
+.bs-success_15 {
+  border: 15px solid #66c75a;
+}
+
+.bs-success_16 {
+  border: 16px solid #66c75a;
+}
+
+.bs-success_17 {
+  border: 17px solid #66c75a;
+}
+
+.bs-success_18 {
+  border: 18px solid #66c75a;
+}
+
+.bs-success_19 {
+  border: 19px solid #66c75a;
+}
+
+.bs-success_20 {
+  border: 20px solid #66c75a;
+}
+
+.bs-success_21 {
+  border: 21px solid #66c75a;
+}
+
+.bs-success_22 {
+  border: 22px solid #66c75a;
+}
+
+.bs-success_23 {
+  border: 23px solid #66c75a;
+}
+
+.bs-success_24 {
+  border: 24px solid #66c75a;
+}
+
+.bs-success_25 {
+  border: 25px solid #66c75a;
+}
+
+.bs-success_26 {
+  border: 26px solid #66c75a;
+}
+
+.bs-success_27 {
+  border: 27px solid #66c75a;
+}
+
+.bs-success_28 {
+  border: 28px solid #66c75a;
+}
+
+.bs-success_29 {
+  border: 29px solid #66c75a;
+}
+
+.bs-success_30 {
+  border: 30px solid #66c75a;
+}
+
+.bs-warning_1 {
+  border: 1px solid #eab543;
+}
+
+.bs-warning_2 {
+  border: 2px solid #eab543;
+}
+
+.bs-warning_3 {
+  border: 3px solid #eab543;
+}
+
+.bs-warning_4 {
+  border: 4px solid #eab543;
+}
+
+.bs-warning_5 {
+  border: 5px solid #eab543;
+}
+
+.bs-warning_6 {
+  border: 6px solid #eab543;
+}
+
+.bs-warning_7 {
+  border: 7px solid #eab543;
+}
+
+.bs-warning_8 {
+  border: 8px solid #eab543;
+}
+
+.bs-warning_9 {
+  border: 9px solid #eab543;
+}
+
+.bs-warning_10 {
+  border: 10px solid #eab543;
+}
+
+.bs-warning_11 {
+  border: 11px solid #eab543;
+}
+
+.bs-warning_12 {
+  border: 12px solid #eab543;
+}
+
+.bs-warning_13 {
+  border: 13px solid #eab543;
+}
+
+.bs-warning_14 {
+  border: 14px solid #eab543;
+}
+
+.bs-warning_15 {
+  border: 15px solid #eab543;
+}
+
+.bs-warning_16 {
+  border: 16px solid #eab543;
+}
+
+.bs-warning_17 {
+  border: 17px solid #eab543;
+}
+
+.bs-warning_18 {
+  border: 18px solid #eab543;
+}
+
+.bs-warning_19 {
+  border: 19px solid #eab543;
+}
+
+.bs-warning_20 {
+  border: 20px solid #eab543;
+}
+
+.bs-warning_21 {
+  border: 21px solid #eab543;
+}
+
+.bs-warning_22 {
+  border: 22px solid #eab543;
+}
+
+.bs-warning_23 {
+  border: 23px solid #eab543;
+}
+
+.bs-warning_24 {
+  border: 24px solid #eab543;
+}
+
+.bs-warning_25 {
+  border: 25px solid #eab543;
+}
+
+.bs-warning_26 {
+  border: 26px solid #eab543;
+}
+
+.bs-warning_27 {
+  border: 27px solid #eab543;
+}
+
+.bs-warning_28 {
+  border: 28px solid #eab543;
+}
+
+.bs-warning_29 {
+  border: 29px solid #eab543;
+}
+
+.bs-warning_30 {
+  border: 30px solid #eab543;
+}
+
+.bs-danger_1 {
+  border: 1px solid #df5050;
+}
+
+.bs-danger_2 {
+  border: 2px solid #df5050;
+}
+
+.bs-danger_3 {
+  border: 3px solid #df5050;
+}
+
+.bs-danger_4 {
+  border: 4px solid #df5050;
+}
+
+.bs-danger_5 {
+  border: 5px solid #df5050;
+}
+
+.bs-danger_6 {
+  border: 6px solid #df5050;
+}
+
+.bs-danger_7 {
+  border: 7px solid #df5050;
+}
+
+.bs-danger_8 {
+  border: 8px solid #df5050;
+}
+
+.bs-danger_9 {
+  border: 9px solid #df5050;
+}
+
+.bs-danger_10 {
+  border: 10px solid #df5050;
+}
+
+.bs-danger_11 {
+  border: 11px solid #df5050;
+}
+
+.bs-danger_12 {
+  border: 12px solid #df5050;
+}
+
+.bs-danger_13 {
+  border: 13px solid #df5050;
+}
+
+.bs-danger_14 {
+  border: 14px solid #df5050;
+}
+
+.bs-danger_15 {
+  border: 15px solid #df5050;
+}
+
+.bs-danger_16 {
+  border: 16px solid #df5050;
+}
+
+.bs-danger_17 {
+  border: 17px solid #df5050;
+}
+
+.bs-danger_18 {
+  border: 18px solid #df5050;
+}
+
+.bs-danger_19 {
+  border: 19px solid #df5050;
+}
+
+.bs-danger_20 {
+  border: 20px solid #df5050;
+}
+
+.bs-danger_21 {
+  border: 21px solid #df5050;
+}
+
+.bs-danger_22 {
+  border: 22px solid #df5050;
+}
+
+.bs-danger_23 {
+  border: 23px solid #df5050;
+}
+
+.bs-danger_24 {
+  border: 24px solid #df5050;
+}
+
+.bs-danger_25 {
+  border: 25px solid #df5050;
+}
+
+.bs-danger_26 {
+  border: 26px solid #df5050;
+}
+
+.bs-danger_27 {
+  border: 27px solid #df5050;
+}
+
+.bs-danger_28 {
+  border: 28px solid #df5050;
+}
+
+.bs-danger_29 {
+  border: 29px solid #df5050;
+}
+
+.bs-danger_30 {
+  border: 30px solid #df5050;
+}
+
+.bs-info_1 {
+  border: 1px solid #4193d7;
+}
+
+.bs-info_2 {
+  border: 2px solid #4193d7;
+}
+
+.bs-info_3 {
+  border: 3px solid #4193d7;
+}
+
+.bs-info_4 {
+  border: 4px solid #4193d7;
+}
+
+.bs-info_5 {
+  border: 5px solid #4193d7;
+}
+
+.bs-info_6 {
+  border: 6px solid #4193d7;
+}
+
+.bs-info_7 {
+  border: 7px solid #4193d7;
+}
+
+.bs-info_8 {
+  border: 8px solid #4193d7;
+}
+
+.bs-info_9 {
+  border: 9px solid #4193d7;
+}
+
+.bs-info_10 {
+  border: 10px solid #4193d7;
+}
+
+.bs-info_11 {
+  border: 11px solid #4193d7;
+}
+
+.bs-info_12 {
+  border: 12px solid #4193d7;
+}
+
+.bs-info_13 {
+  border: 13px solid #4193d7;
+}
+
+.bs-info_14 {
+  border: 14px solid #4193d7;
+}
+
+.bs-info_15 {
+  border: 15px solid #4193d7;
+}
+
+.bs-info_16 {
+  border: 16px solid #4193d7;
+}
+
+.bs-info_17 {
+  border: 17px solid #4193d7;
+}
+
+.bs-info_18 {
+  border: 18px solid #4193d7;
+}
+
+.bs-info_19 {
+  border: 19px solid #4193d7;
+}
+
+.bs-info_20 {
+  border: 20px solid #4193d7;
+}
+
+.bs-info_21 {
+  border: 21px solid #4193d7;
+}
+
+.bs-info_22 {
+  border: 22px solid #4193d7;
+}
+
+.bs-info_23 {
+  border: 23px solid #4193d7;
+}
+
+.bs-info_24 {
+  border: 24px solid #4193d7;
+}
+
+.bs-info_25 {
+  border: 25px solid #4193d7;
+}
+
+.bs-info_26 {
+  border: 26px solid #4193d7;
+}
+
+.bs-info_27 {
+  border: 27px solid #4193d7;
+}
+
+.bs-info_28 {
+  border: 28px solid #4193d7;
+}
+
+.bs-info_29 {
+  border: 29px solid #4193d7;
+}
+
+.bs-info_30 {
+  border: 30px solid #4193d7;
+}
+
+.bs-dark_1 {
+  border: 1px solid #232323;
+}
+
+.bs-dark_2 {
+  border: 2px solid #232323;
+}
+
+.bs-dark_3 {
+  border: 3px solid #232323;
+}
+
+.bs-dark_4 {
+  border: 4px solid #232323;
+}
+
+.bs-dark_5 {
+  border: 5px solid #232323;
+}
+
+.bs-dark_6 {
+  border: 6px solid #232323;
+}
+
+.bs-dark_7 {
+  border: 7px solid #232323;
+}
+
+.bs-dark_8 {
+  border: 8px solid #232323;
+}
+
+.bs-dark_9 {
+  border: 9px solid #232323;
+}
+
+.bs-dark_10 {
+  border: 10px solid #232323;
+}
+
+.bs-dark_11 {
+  border: 11px solid #232323;
+}
+
+.bs-dark_12 {
+  border: 12px solid #232323;
+}
+
+.bs-dark_13 {
+  border: 13px solid #232323;
+}
+
+.bs-dark_14 {
+  border: 14px solid #232323;
+}
+
+.bs-dark_15 {
+  border: 15px solid #232323;
+}
+
+.bs-dark_16 {
+  border: 16px solid #232323;
+}
+
+.bs-dark_17 {
+  border: 17px solid #232323;
+}
+
+.bs-dark_18 {
+  border: 18px solid #232323;
+}
+
+.bs-dark_19 {
+  border: 19px solid #232323;
+}
+
+.bs-dark_20 {
+  border: 20px solid #232323;
+}
+
+.bs-dark_21 {
+  border: 21px solid #232323;
+}
+
+.bs-dark_22 {
+  border: 22px solid #232323;
+}
+
+.bs-dark_23 {
+  border: 23px solid #232323;
+}
+
+.bs-dark_24 {
+  border: 24px solid #232323;
+}
+
+.bs-dark_25 {
+  border: 25px solid #232323;
+}
+
+.bs-dark_26 {
+  border: 26px solid #232323;
+}
+
+.bs-dark_27 {
+  border: 27px solid #232323;
+}
+
+.bs-dark_28 {
+  border: 28px solid #232323;
+}
+
+.bs-dark_29 {
+  border: 29px solid #232323;
+}
+
+.bs-dark_30 {
+  border: 30px solid #232323;
+}
+
+.bs-light_1 {
+  border: 1px solid #f7f7f7;
+}
+
+.bs-light_2 {
+  border: 2px solid #f7f7f7;
+}
+
+.bs-light_3 {
+  border: 3px solid #f7f7f7;
+}
+
+.bs-light_4 {
+  border: 4px solid #f7f7f7;
+}
+
+.bs-light_5 {
+  border: 5px solid #f7f7f7;
+}
+
+.bs-light_6 {
+  border: 6px solid #f7f7f7;
+}
+
+.bs-light_7 {
+  border: 7px solid #f7f7f7;
+}
+
+.bs-light_8 {
+  border: 8px solid #f7f7f7;
+}
+
+.bs-light_9 {
+  border: 9px solid #f7f7f7;
+}
+
+.bs-light_10 {
+  border: 10px solid #f7f7f7;
+}
+
+.bs-light_11 {
+  border: 11px solid #f7f7f7;
+}
+
+.bs-light_12 {
+  border: 12px solid #f7f7f7;
+}
+
+.bs-light_13 {
+  border: 13px solid #f7f7f7;
+}
+
+.bs-light_14 {
+  border: 14px solid #f7f7f7;
+}
+
+.bs-light_15 {
+  border: 15px solid #f7f7f7;
+}
+
+.bs-light_16 {
+  border: 16px solid #f7f7f7;
+}
+
+.bs-light_17 {
+  border: 17px solid #f7f7f7;
+}
+
+.bs-light_18 {
+  border: 18px solid #f7f7f7;
+}
+
+.bs-light_19 {
+  border: 19px solid #f7f7f7;
+}
+
+.bs-light_20 {
+  border: 20px solid #f7f7f7;
+}
+
+.bs-light_21 {
+  border: 21px solid #f7f7f7;
+}
+
+.bs-light_22 {
+  border: 22px solid #f7f7f7;
+}
+
+.bs-light_23 {
+  border: 23px solid #f7f7f7;
+}
+
+.bs-light_24 {
+  border: 24px solid #f7f7f7;
+}
+
+.bs-light_25 {
+  border: 25px solid #f7f7f7;
+}
+
+.bs-light_26 {
+  border: 26px solid #f7f7f7;
+}
+
+.bs-light_27 {
+  border: 27px solid #f7f7f7;
+}
+
+.bs-light_28 {
+  border: 28px solid #f7f7f7;
+}
+
+.bs-light_29 {
+  border: 29px solid #f7f7f7;
+}
+
+.bs-light_30 {
+  border: 30px solid #f7f7f7;
+}
+
+/*############################################################################################
+#                                                                                            #
+#                                           BUTTON                                           #
+#                                                                                            #
+############################################################################################*/
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button.disabled {
+  filter: brightness(70%);
+  cursor: not-allowed;
+}
+
+/*############################################################################################
+#                                                                                            #
+#                                           FONTS                                            #                                                                                           
+#                                                                                            #
+############################################################################################*/
+/*############################################################################################
+#                                                                                            #
+#                                           TEXT                                             #                                                                                           
+#                                                                                            #
+############################################################################################*/
+.b {
+  font-weight: bold;
+}
+
+.i {
+  font-style: italic;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.h1, h1 {
+  font-size: 2.5rem;
+}
+
+.h2, h2 {
+  font-size: 2rem;
+}
+
+.h3, h3 {
+  font-size: 1.75rem;
+}
+
+.h4, h4 {
+  font-size: 1.5rem;
+}
+
+.h5, h5 {
+  font-size: 1.25rem;
+}
+
+.h6, h6 {
+  font-size: 1rem;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tar {
+  text-align: right;
+}
+
+/*############################################################################################
+#                                                                                            #
+#                                           WRAPPER                                          #                                                                                           
+#                                                                                            #
+############################################################################################*/
+#wrappersite {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  transition: 0.6s;
+  position: relative;
+}
+
+.wrappercontent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
